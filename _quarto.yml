@@ -4,6 +4,12 @@ project:
 
 website:
   title: "Discrete Mathematics 2"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: seminars/seminar_1.ipynb
+        text: Seminar 1
 
 format:
   html:
