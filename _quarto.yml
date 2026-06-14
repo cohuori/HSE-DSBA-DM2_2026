@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Discrete Mathematics 2"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+    code-fold: true
+
+execute:
+  echo: false
+  warning: false
+  message: false
