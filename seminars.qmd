@@ -1,0 +1,5 @@
+# Seminars
+
+## Seminar 1
+
+[Seminar 1: Introduction to Graph Theory](seminars/seminar_1.ipynb)
