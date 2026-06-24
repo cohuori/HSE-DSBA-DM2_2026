@@ -8,7 +8,7 @@
 
 <meta name="author" content="Carlos Buitrago">
 
-<title>Seminar 1: – Discrete Mathematics 2</title>
+<title>Seminar 1: Graphs and Isomorphism – Discrete Mathematics 2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -145,66 +145,67 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#graphs-and-isomorphism" id="toc-graphs-and-isomorphism" class="nav-link active" data-scroll-target="#graphs-and-isomorphism"><span class="header-section-number">1</span> Graphs and Isomorphism</a>
+  <li><a href="#graphs" id="toc-graphs" class="nav-link active" data-scroll-target="#graphs"><span class="header-section-number">1</span> Graphs</a>
   <ul class="collapse">
-  <li><a href="#graphs" id="toc-graphs" class="nav-link" data-scroll-target="#graphs"><span class="header-section-number">1.1</span> Graphs</a></li>
-  <li><a href="#degree-of-a-vertex" id="toc-degree-of-a-vertex" class="nav-link" data-scroll-target="#degree-of-a-vertex"><span class="header-section-number">1.2</span> Degree of a Vertex</a></li>
-  <li><a href="#handshake-lemma" id="toc-handshake-lemma" class="nav-link" data-scroll-target="#handshake-lemma"><span class="header-section-number">1.3</span> Handshake Lemma</a>
+  <li><a href="#degree-of-a-vertex" id="toc-degree-of-a-vertex" class="nav-link" data-scroll-target="#degree-of-a-vertex"><span class="header-section-number">1.1</span> Degree of a Vertex</a></li>
+  <li><a href="#handshake-lemma" id="toc-handshake-lemma" class="nav-link" data-scroll-target="#handshake-lemma"><span class="header-section-number">1.2</span> Handshake Lemma</a>
   <ul class="collapse">
-  <li><a href="#theorem-handshake-lemma" id="toc-theorem-handshake-lemma" class="nav-link" data-scroll-target="#theorem-handshake-lemma"><span class="header-section-number">1.3.1</span> Theorem (Handshake Lemma)</a></li>
-  <li><a href="#proof" id="toc-proof" class="nav-link" data-scroll-target="#proof"><span class="header-section-number">1.3.2</span> Proof</a></li>
-  <li><a href="#corollary" id="toc-corollary" class="nav-link" data-scroll-target="#corollary"><span class="header-section-number">1.3.3</span> Corollary</a></li>
+  <li><a href="#theorem-handshake-lemma" id="toc-theorem-handshake-lemma" class="nav-link" data-scroll-target="#theorem-handshake-lemma"><span class="header-section-number">1.2.1</span> Theorem (Handshake Lemma)</a></li>
+  <li><a href="#proof" id="toc-proof" class="nav-link" data-scroll-target="#proof"><span class="header-section-number">1.2.2</span> Proof</a></li>
+  <li><a href="#corollary" id="toc-corollary" class="nav-link" data-scroll-target="#corollary"><span class="header-section-number">1.2.3</span> Corollary</a></li>
   </ul></li>
-  <li><a href="#degree-sequences" id="toc-degree-sequences" class="nav-link" data-scroll-target="#degree-sequences"><span class="header-section-number">1.4</span> Degree Sequences</a></li>
-  <li><a href="#graph-isomorphism" id="toc-graph-isomorphism" class="nav-link" data-scroll-target="#graph-isomorphism"><span class="header-section-number">1.5</span> 7. Graph Isomorphism</a>
-  <ul class="collapse">
-  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition"><span class="header-section-number">1.5.1</span> Definition</a></li>
+  <li><a href="#degree-sequences" id="toc-degree-sequences" class="nav-link" data-scroll-target="#degree-sequences"><span class="header-section-number">1.3</span> Degree Sequences</a></li>
   </ul></li>
-  <li><a href="#invariants-of-isomorphism" id="toc-invariants-of-isomorphism" class="nav-link" data-scroll-target="#invariants-of-isomorphism"><span class="header-section-number">1.6</span> Invariants of Isomorphism</a></li>
-  <li><a href="#connected-graphs" id="toc-connected-graphs" class="nav-link" data-scroll-target="#connected-graphs"><span class="header-section-number">1.7</span> Connected Graphs</a>
+  <li><a href="#graph-isomorphism" id="toc-graph-isomorphism" class="nav-link" data-scroll-target="#graph-isomorphism"><span class="header-section-number">2</span> Graph Isomorphism</a>
   <ul class="collapse">
-  <li><a href="#definition-1" id="toc-definition-1" class="nav-link" data-scroll-target="#definition-1"><span class="header-section-number">1.7.1</span> Definition</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition"><span class="header-section-number">2.1</span> Definition</a></li>
+  <li><a href="#invariants-of-isomorphism" id="toc-invariants-of-isomorphism" class="nav-link" data-scroll-target="#invariants-of-isomorphism"><span class="header-section-number">2.2</span> Invariants of Isomorphism</a></li>
   </ul></li>
-  <li><a href="#trees" id="toc-trees" class="nav-link" data-scroll-target="#trees"><span class="header-section-number">1.8</span> Trees</a></li>
-  <li><a href="#complement-of-a-graph" id="toc-complement-of-a-graph" class="nav-link" data-scroll-target="#complement-of-a-graph"><span class="header-section-number">1.9</span> Complement of a Graph</a></li>
-  <li><a href="#self-complementary-graphs" id="toc-self-complementary-graphs" class="nav-link" data-scroll-target="#self-complementary-graphs"><span class="header-section-number">1.10</span> Self-Complementary Graphs</a>
+  <li><a href="#connected-graphs" id="toc-connected-graphs" class="nav-link" data-scroll-target="#connected-graphs"><span class="header-section-number">3</span> Connected Graphs</a>
   <ul class="collapse">
-  <li><a href="#proposition" id="toc-proposition" class="nav-link" data-scroll-target="#proposition"><span class="header-section-number">1.10.1</span> Proposition</a></li>
-  </ul></li>
-  <li><a href="#connectivity-of-complements" id="toc-connectivity-of-complements" class="nav-link" data-scroll-target="#connectivity-of-complements"><span class="header-section-number">1.11</span> Connectivity of Complements</a>
+  <li><a href="#definition-1" id="toc-definition-1" class="nav-link" data-scroll-target="#definition-1"><span class="header-section-number">3.1</span> Definition</a></li>
+  <li><a href="#trees" id="toc-trees" class="nav-link" data-scroll-target="#trees"><span class="header-section-number">3.2</span> Trees</a></li>
+  <li><a href="#complement-of-a-graph" id="toc-complement-of-a-graph" class="nav-link" data-scroll-target="#complement-of-a-graph"><span class="header-section-number">3.3</span> Complement of a Graph</a></li>
+  <li><a href="#self-complementary-graphs" id="toc-self-complementary-graphs" class="nav-link" data-scroll-target="#self-complementary-graphs"><span class="header-section-number">3.4</span> Self-Complementary Graphs</a>
   <ul class="collapse">
-  <li><a href="#theorem" id="toc-theorem" class="nav-link" data-scroll-target="#theorem"><span class="header-section-number">1.11.1</span> Theorem</a></li>
-  <li><a href="#proof-1" id="toc-proof-1" class="nav-link" data-scroll-target="#proof-1"><span class="header-section-number">1.11.2</span> Proof</a></li>
-  <li><a href="#corollary-1" id="toc-corollary-1" class="nav-link" data-scroll-target="#corollary-1"><span class="header-section-number">1.11.3</span> Corollary</a></li>
+  <li><a href="#proposition" id="toc-proposition" class="nav-link" data-scroll-target="#proposition"><span class="header-section-number">3.4.1</span> Proposition</a></li>
   </ul></li>
-  <li><a href="#non-isomorphic-graphs" id="toc-non-isomorphic-graphs" class="nav-link" data-scroll-target="#non-isomorphic-graphs"><span class="header-section-number">1.12</span> Non-Isomorphic Graphs</a></li>
-  <li><a href="#ramsey-theory" id="toc-ramsey-theory" class="nav-link" data-scroll-target="#ramsey-theory"><span class="header-section-number">1.13</span> Ramsey Theory</a>
+  <li><a href="#connectivity-of-complements" id="toc-connectivity-of-complements" class="nav-link" data-scroll-target="#connectivity-of-complements"><span class="header-section-number">3.5</span> Connectivity of Complements</a>
   <ul class="collapse">
-  <li><a href="#definition-2" id="toc-definition-2" class="nav-link" data-scroll-target="#definition-2"><span class="header-section-number">1.13.1</span> Definition</a></li>
+  <li><a href="#theorem" id="toc-theorem" class="nav-link" data-scroll-target="#theorem"><span class="header-section-number">3.5.1</span> Theorem</a></li>
+  <li><a href="#proof-1" id="toc-proof-1" class="nav-link" data-scroll-target="#proof-1"><span class="header-section-number">3.5.2</span> Proof</a></li>
+  <li><a href="#corollary-1" id="toc-corollary-1" class="nav-link" data-scroll-target="#corollary-1"><span class="header-section-number">3.5.3</span> Corollary</a></li>
   </ul></li>
-  <li><a href="#how-to-verify-whether-two-graphs-are-isomorphic" id="toc-how-to-verify-whether-two-graphs-are-isomorphic" class="nav-link" data-scroll-target="#how-to-verify-whether-two-graphs-are-isomorphic"><span class="header-section-number">1.14</span> How to Verify Whether Two Graphs Are Isomorphic</a>
+  <li><a href="#non-isomorphic-graphs" id="toc-non-isomorphic-graphs" class="nav-link" data-scroll-target="#non-isomorphic-graphs"><span class="header-section-number">3.6</span> Non-Isomorphic Graphs</a></li>
+  </ul></li>
+  <li><a href="#ramsey-theory" id="toc-ramsey-theory" class="nav-link" data-scroll-target="#ramsey-theory"><span class="header-section-number">4</span> Ramsey Theory</a>
   <ul class="collapse">
-  <li><a href="#step-1.-compare-the-degree-sequences" id="toc-step-1.-compare-the-degree-sequences" class="nav-link" data-scroll-target="#step-1.-compare-the-degree-sequences"><span class="header-section-number">1.14.1</span> Step 1. Compare the Degree Sequences</a></li>
-  <li><a href="#step-4.-compare-local-structures" id="toc-step-4.-compare-local-structures" class="nav-link" data-scroll-target="#step-4.-compare-local-structures"><span class="header-section-number">1.14.2</span> Step 4. Compare Local Structures</a></li>
-  <li><a href="#step-5.-match-distinguished-vertices" id="toc-step-5.-match-distinguished-vertices" class="nav-link" data-scroll-target="#step-5.-match-distinguished-vertices"><span class="header-section-number">1.14.3</span> Step 5. Match Distinguished Vertices</a></li>
-  <li><a href="#step-6.-construct-an-explicit-bijection" id="toc-step-6.-construct-an-explicit-bijection" class="nav-link" data-scroll-target="#step-6.-construct-an-explicit-bijection"><span class="header-section-number">1.14.4</span> Step 6. Construct an Explicit Bijection</a></li>
+  <li><a href="#definition-2" id="toc-definition-2" class="nav-link" data-scroll-target="#definition-2"><span class="header-section-number">4.1</span> Definition</a></li>
   </ul></li>
-  <li><a href="#beyond-graph-invariants-the-graph-isomorphism-problem" id="toc-beyond-graph-invariants-the-graph-isomorphism-problem" class="nav-link" data-scroll-target="#beyond-graph-invariants-the-graph-isomorphism-problem"><span class="header-section-number">1.15</span> Beyond Graph Invariants: The Graph Isomorphism Problem</a></li>
-  <li><a href="#the-graph-isomorphism-problem" id="toc-the-graph-isomorphism-problem" class="nav-link" data-scroll-target="#the-graph-isomorphism-problem"><span class="header-section-number">1.16</span> The Graph Isomorphism Problem</a>
+  <li><a href="#how-to-verify-whether-two-graphs-are-isomorphic" id="toc-how-to-verify-whether-two-graphs-are-isomorphic" class="nav-link" data-scroll-target="#how-to-verify-whether-two-graphs-are-isomorphic"><span class="header-section-number">5</span> How to Verify Whether Two Graphs Are Isomorphic</a>
   <ul class="collapse">
-  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input"><span class="header-section-number">1.16.1</span> Input</a></li>
-  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question"><span class="header-section-number">1.16.2</span> Question</a></li>
+  <li><a href="#step-1.-compare-the-degree-sequences" id="toc-step-1.-compare-the-degree-sequences" class="nav-link" data-scroll-target="#step-1.-compare-the-degree-sequences"><span class="header-section-number">5.1</span> Step 1. Compare the Degree Sequences</a></li>
+  <li><a href="#step-4.-compare-local-structures" id="toc-step-4.-compare-local-structures" class="nav-link" data-scroll-target="#step-4.-compare-local-structures"><span class="header-section-number">5.2</span> Step 4. Compare Local Structures</a></li>
+  <li><a href="#step-5.-match-distinguished-vertices" id="toc-step-5.-match-distinguished-vertices" class="nav-link" data-scroll-target="#step-5.-match-distinguished-vertices"><span class="header-section-number">5.3</span> Step 5. Match Distinguished Vertices</a></li>
+  <li><a href="#step-6.-construct-an-explicit-bijection" id="toc-step-6.-construct-an-explicit-bijection" class="nav-link" data-scroll-target="#step-6.-construct-an-explicit-bijection"><span class="header-section-number">5.4</span> Step 6. Construct an Explicit Bijection</a></li>
   </ul></li>
-  <li><a href="#a-naive-algorithm" id="toc-a-naive-algorithm" class="nav-link" data-scroll-target="#a-naive-algorithm"><span class="header-section-number">1.17</span> A Naive Algorithm</a>
+  <li><a href="#beyond-graph-invariants-the-graph-isomorphism-problem" id="toc-beyond-graph-invariants-the-graph-isomorphism-problem" class="nav-link" data-scroll-target="#beyond-graph-invariants-the-graph-isomorphism-problem"><span class="header-section-number">6</span> Beyond Graph Invariants: The Graph Isomorphism Problem</a>
   <ul class="collapse">
-  <li><a href="#how-long-would-brute-force-take" id="toc-how-long-would-brute-force-take" class="nav-link" data-scroll-target="#how-long-would-brute-force-take"><span class="header-section-number">1.17.1</span> How Long Would Brute Force Take?</a></li>
+  <li><a href="#the-graph-isomorphism-problem" id="toc-the-graph-isomorphism-problem" class="nav-link" data-scroll-target="#the-graph-isomorphism-problem"><span class="header-section-number">6.1</span> The Graph Isomorphism Problem</a>
+  <ul class="collapse">
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input"><span class="header-section-number">6.1.1</span> Input</a></li>
+  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question"><span class="header-section-number">6.1.2</span> Question</a></li>
   </ul></li>
-  <li><a href="#complexity-theoretic-status" id="toc-complexity-theoretic-status" class="nav-link" data-scroll-target="#complexity-theoretic-status"><span class="header-section-number">1.18</span> Complexity-Theoretic Status</a></li>
-  <li><a href="#the-weisfeilerleman-method" id="toc-the-weisfeilerleman-method" class="nav-link" data-scroll-target="#the-weisfeilerleman-method"><span class="header-section-number">1.19</span> The Weisfeiler–Leman Method</a></li>
-  <li><a href="#babais-breakthrough-2015" id="toc-babais-breakthrough-2015" class="nav-link" data-scroll-target="#babais-breakthrough-2015"><span class="header-section-number">1.20</span> Babai’s Breakthrough (2015)</a></li>
-  <li><a href="#special-classes-of-graphs" id="toc-special-classes-of-graphs" class="nav-link" data-scroll-target="#special-classes-of-graphs"><span class="header-section-number">1.21</span> Special Classes of Graphs</a></li>
-  <li><a href="#modern-algorithms" id="toc-modern-algorithms" class="nav-link" data-scroll-target="#modern-algorithms"><span class="header-section-number">1.22</span> Modern Algorithms</a></li>
-  <li><a href="#state-of-the-art" id="toc-state-of-the-art" class="nav-link" data-scroll-target="#state-of-the-art"><span class="header-section-number">1.23</span> State of the Art</a></li>
+  <li><a href="#a-naive-algorithm" id="toc-a-naive-algorithm" class="nav-link" data-scroll-target="#a-naive-algorithm"><span class="header-section-number">6.2</span> A Naive Algorithm</a>
+  <ul class="collapse">
+  <li><a href="#how-long-would-brute-force-take" id="toc-how-long-would-brute-force-take" class="nav-link" data-scroll-target="#how-long-would-brute-force-take"><span class="header-section-number">6.2.1</span> How Long Would Brute Force Take?</a></li>
+  </ul></li>
+  <li><a href="#complexity-theoretic-status" id="toc-complexity-theoretic-status" class="nav-link" data-scroll-target="#complexity-theoretic-status"><span class="header-section-number">6.3</span> Complexity-Theoretic Status</a></li>
+  <li><a href="#the-weisfeilerleman-method" id="toc-the-weisfeilerleman-method" class="nav-link" data-scroll-target="#the-weisfeilerleman-method"><span class="header-section-number">6.4</span> The Weisfeiler–Leman Method</a></li>
+  <li><a href="#babais-breakthrough-2015" id="toc-babais-breakthrough-2015" class="nav-link" data-scroll-target="#babais-breakthrough-2015"><span class="header-section-number">6.5</span> Babai’s Breakthrough (2015)</a></li>
+  <li><a href="#special-classes-of-graphs" id="toc-special-classes-of-graphs" class="nav-link" data-scroll-target="#special-classes-of-graphs"><span class="header-section-number">6.6</span> Special Classes of Graphs</a></li>
+  <li><a href="#modern-algorithms" id="toc-modern-algorithms" class="nav-link" data-scroll-target="#modern-algorithms"><span class="header-section-number">6.7</span> Modern Algorithms</a></li>
+  <li><a href="#state-of-the-art" id="toc-state-of-the-art" class="nav-link" data-scroll-target="#state-of-the-art"><span class="header-section-number">6.8</span> State of the Art</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="seminar_1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -214,7 +215,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Seminar 1:</h1>
+<h1 class="title">Seminar 1: Graphs and Isomorphism</h1>
 </div>
 
 
@@ -237,11 +238,9 @@ window.Quarto = {
 </header>
 
 
-<section id="graphs-and-isomorphism" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Graphs and Isomorphism</h1>
 <p>In this seminar we introduce the basic notions of graph theory required for studying graph isomorphism, connectedness, graph complements, and elementary Ramsey theory.</p>
-<section id="graphs" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="graphs"><span class="header-section-number">1.1</span> Graphs</h2>
+<section id="graphs" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Graphs</h1>
 <p>A <strong>simple graph</strong> is a pair</p>
 <p><span class="math display">\[
 G=(V,E),
@@ -254,9 +253,8 @@ G=(V,E),
 <p>Throughout the seminar we consider only finite simple graphs.</p>
 <p>If <span class="math inline">\(|V|=p\)</span>, <span class="math inline">\(|E|=q\)</span>, then <span class="math inline">\(G\)</span> is called a <strong><span class="math inline">\((p,q)\)</span>-graph</strong>.</p>
 <p>The complete graph on <span class="math inline">\(n\)</span> vertices is denoted by <span class="math inline">\(K_n\)</span>.</p>
-</section>
-<section id="degree-of-a-vertex" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="degree-of-a-vertex"><span class="header-section-number">1.2</span> Degree of a Vertex</h2>
+<section id="degree-of-a-vertex" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="degree-of-a-vertex"><span class="header-section-number">1.1</span> Degree of a Vertex</h2>
 <p>The <strong>degree</strong> of a vertex <span class="math inline">\(v\)</span> is the number of edges incident with <span class="math inline">\(v\)</span>. It is denoted by <span class="math inline">\(d(v)\)</span>.</p>
 <p>The list</p>
 <p><span class="math display">\[
@@ -265,31 +263,31 @@ G=(V,E),
 <p>is called the <strong>degree sequence</strong> of the graph.</p>
 <p>Usually the degree sequence is written in non-increasing order.</p>
 </section>
-<section id="handshake-lemma" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="handshake-lemma"><span class="header-section-number">1.3</span> Handshake Lemma</h2>
+<section id="handshake-lemma" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="handshake-lemma"><span class="header-section-number">1.2</span> Handshake Lemma</h2>
 <p>One of the most fundamental identities in graph theory is the following.</p>
-<section id="theorem-handshake-lemma" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="theorem-handshake-lemma"><span class="header-section-number">1.3.1</span> Theorem (Handshake Lemma)</h3>
+<section id="theorem-handshake-lemma" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="theorem-handshake-lemma"><span class="header-section-number">1.2.1</span> Theorem (Handshake Lemma)</h3>
 <p>For every graph <span class="math inline">\(G\)</span>,</p>
 <p><span class="math display">\[
 \sum_{v\in V(G)} d(v)=2|E(G)|.
 \]</span></p>
 </section>
-<section id="proof" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="proof"><span class="header-section-number">1.3.2</span> Proof</h3>
+<section id="proof" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="proof"><span class="header-section-number">1.2.2</span> Proof</h3>
 <p>Every edge contributes exactly one to the degree of each of its endpoints. Hence every edge contributes two to the total sum of degrees. Therefore</p>
 <p><span class="math display">\[
 \sum_{v\in V(G)} d(v)=2|E(G)|.
 \qquad\square
 \]</span></p>
 </section>
-<section id="corollary" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="corollary"><span class="header-section-number">1.3.3</span> Corollary</h3>
+<section id="corollary" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="corollary"><span class="header-section-number">1.2.3</span> Corollary</h3>
 <p>The number of vertices of odd degree is even.</p>
 </section>
 </section>
-<section id="degree-sequences" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="degree-sequences"><span class="header-section-number">1.4</span> Degree Sequences</h2>
+<section id="degree-sequences" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="degree-sequences"><span class="header-section-number">1.3</span> Degree Sequences</h2>
 <p>A sequence</p>
 <p><span class="math display">\[
 (d_1,\ldots,d_n)
@@ -301,11 +299,12 @@ d_1+\cdots+d_n
 \]</span></p>
 <p>must be an even number. This condition is necessary but not sufficient. For example, <span class="math inline">\((4,4,4,4,2)\)</span> is not graphical.</p>
 </section>
-<section id="graph-isomorphism" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="graph-isomorphism"><span class="header-section-number">1.5</span> 7. Graph Isomorphism</h2>
+</section>
+<section id="graph-isomorphism" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Graph Isomorphism</h1>
 <p>Two graphs may look different when drawn in the plane while representing exactly the same combinatorial structure.</p>
-<section id="definition" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">1.5.1</span> Definition</h3>
+<section id="definition" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">2.1</span> Definition</h2>
 <p>Graphs</p>
 <p><span class="math display">\[
 G=(V,E),
@@ -325,9 +324,8 @@ G\cong H.
 \]</span></p>
 <p>Intuitively, two graphs are isomorphic if one can be obtained from the other merely by relabelling the vertices.</p>
 </section>
-</section>
-<section id="invariants-of-isomorphism" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="invariants-of-isomorphism"><span class="header-section-number">1.6</span> Invariants of Isomorphism</h2>
+<section id="invariants-of-isomorphism" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="invariants-of-isomorphism"><span class="header-section-number">2.2</span> Invariants of Isomorphism</h2>
 <p>A quantity that is preserved under isomorphism is called a <strong>graph invariant</strong>.</p>
 <p>If</p>
 <p><span class="math display">\[
@@ -343,27 +341,27 @@ G\cong H,
 </ul>
 <p>Graph invariants are useful for proving that two graphs are not isomorphic.</p>
 </section>
-<section id="connected-graphs" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="connected-graphs"><span class="header-section-number">1.7</span> Connected Graphs</h2>
+</section>
+<section id="connected-graphs" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Connected Graphs</h1>
 <p>A <strong>path</strong> in a graph is a sequence of vertices</p>
 <p><span class="math display">\[
 v_0,v_1,\ldots,v_k
 \]</span></p>
 <p>such that every consecutive pair of vertices is connected by an edge.</p>
-<section id="definition-1" class="level3" data-number="1.7.1">
-<h3 data-number="1.7.1" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">1.7.1</span> Definition</h3>
+<section id="definition-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">3.1</span> Definition</h2>
 <p>A graph is called <strong>connected</strong> if every pair of vertices can be joined by a path.</p>
 <p>A maximal connected subgraph is called a <strong>connected component</strong>.</p>
 <p>Every graph can be uniquely decomposed into connected components.</p>
 </section>
-</section>
-<section id="trees" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="trees"><span class="header-section-number">1.8</span> Trees</h2>
+<section id="trees" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="trees"><span class="header-section-number">3.2</span> Trees</h2>
 <p>A graph is called a <strong>tree</strong> if it is connected and contains no cycles.</p>
 <p>Trees play a central role in graph theory.</p>
 </section>
-<section id="complement-of-a-graph" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="complement-of-a-graph"><span class="header-section-number">1.9</span> Complement of a Graph</h2>
+<section id="complement-of-a-graph" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="complement-of-a-graph"><span class="header-section-number">3.3</span> Complement of a Graph</h2>
 <p>Let <span class="math inline">\(G=(V,E)\)</span> be a graph. The <strong>complement</strong> of <span class="math inline">\(G\)</span> is the graph <span class="math inline">\(\overline G=(V,\overline E)\)</span>, where</p>
 <p><span class="math display">\[
 uv\in\overline E
@@ -377,14 +375,14 @@ E(\overline G)
 E(K_n)\setminus E(G).
 \]</span></p>
 </section>
-<section id="self-complementary-graphs" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="self-complementary-graphs"><span class="header-section-number">1.10</span> Self-Complementary Graphs</h2>
+<section id="self-complementary-graphs" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="self-complementary-graphs"><span class="header-section-number">3.4</span> Self-Complementary Graphs</h2>
 <p>A graph is called <strong>self-complementary</strong> if</p>
 <p><span class="math display">\[
 G\cong \overline G.
 \]</span></p>
-<section id="proposition" class="level3" data-number="1.10.1">
-<h3 data-number="1.10.1" class="anchored" data-anchor-id="proposition"><span class="header-section-number">1.10.1</span> Proposition</h3>
+<section id="proposition" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="proposition"><span class="header-section-number">3.4.1</span> Proposition</h3>
 <p>If <span class="math inline">\(G\)</span> is self-complementary and has <span class="math inline">\(n\)</span> vertices, then</p>
 <p><span class="math display">\[
 |E(G)|
@@ -393,10 +391,10 @@ G\cong \overline G.
 \]</span></p>
 </section>
 </section>
-<section id="connectivity-of-complements" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="connectivity-of-complements"><span class="header-section-number">1.11</span> Connectivity of Complements</h2>
-<section id="theorem" class="level3" data-number="1.11.1">
-<h3 data-number="1.11.1" class="anchored" data-anchor-id="theorem"><span class="header-section-number">1.11.1</span> Theorem</h3>
+<section id="connectivity-of-complements" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="connectivity-of-complements"><span class="header-section-number">3.5</span> Connectivity of Complements</h2>
+<section id="theorem" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="theorem"><span class="header-section-number">3.5.1</span> Theorem</h3>
 <p>For every graph <span class="math inline">\(G\)</span>, at least one of the graphs</p>
 <p><span class="math display">\[
 G
@@ -405,27 +403,28 @@ G
 \]</span></p>
 <p>is connected.</p>
 </section>
-<section id="proof-1" class="level3" data-number="1.11.2">
-<h3 data-number="1.11.2" class="anchored" data-anchor-id="proof-1"><span class="header-section-number">1.11.2</span> Proof</h3>
+<section id="proof-1" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="proof-1"><span class="header-section-number">3.5.2</span> Proof</h3>
 <p>Assume that <span class="math inline">\(G\)</span> is disconnected. Then its vertices can be partitioned into at least two connected components.</p>
 <p>Vertices belonging to different components are not adjacent in <span class="math inline">\(G\)</span>, and therefore become adjacent in <span class="math inline">\(\overline G\)</span>. Consequently every component of <span class="math inline">\(G\)</span> is connected to every other component inside <span class="math inline">\(\overline G\)</span>, implying that <span class="math inline">\(\overline G\)</span> is connected. <span class="math inline">\(\square\)</span></p>
 </section>
-<section id="corollary-1" class="level3" data-number="1.11.3">
-<h3 data-number="1.11.3" class="anchored" data-anchor-id="corollary-1"><span class="header-section-number">1.11.3</span> Corollary</h3>
+<section id="corollary-1" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="corollary-1"><span class="header-section-number">3.5.3</span> Corollary</h3>
 <p>Every self-complementary graph is connected.</p>
 </section>
 </section>
-<section id="non-isomorphic-graphs" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="non-isomorphic-graphs"><span class="header-section-number">1.12</span> Non-Isomorphic Graphs</h2>
+<section id="non-isomorphic-graphs" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="non-isomorphic-graphs"><span class="header-section-number">3.6</span> Non-Isomorphic Graphs</h2>
 <p>Two graphs are called <strong>non-isomorphic</strong> if no isomorphism between them exists.</p>
 <p>When counting graphs up to isomorphism, graphs differing only by vertex labels are considered identical.</p>
 <p>This leads to the notion of an <strong>unlabelled graph</strong>, which represents an entire isomorphism class of labelled graphs.</p>
 </section>
-<section id="ramsey-theory" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="ramsey-theory"><span class="header-section-number">1.13</span> Ramsey Theory</h2>
+</section>
+<section id="ramsey-theory" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Ramsey Theory</h1>
 <p>Ramsey theory studies the appearance of order in sufficiently large structures.</p>
-<section id="definition-2" class="level3" data-number="1.13.1">
-<h3 data-number="1.13.1" class="anchored" data-anchor-id="definition-2"><span class="header-section-number">1.13.1</span> Definition</h3>
+<section id="definition-2" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="definition-2"><span class="header-section-number">4.1</span> Definition</h2>
 <p>The <strong>Ramsey number</strong> <span class="math inline">\(R(s,t)\)</span> is the smallest integer <span class="math inline">\(n\)</span> such that every red-blue colouring of the edges of <span class="math inline">\(K_n\)</span> contains either</p>
 <ul>
 <li>a red copy of <span class="math inline">\(K_s\)</span>, or</li>
@@ -433,18 +432,18 @@ G
 </ul>
 </section>
 </section>
-<section id="how-to-verify-whether-two-graphs-are-isomorphic" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="how-to-verify-whether-two-graphs-are-isomorphic"><span class="header-section-number">1.14</span> How to Verify Whether Two Graphs Are Isomorphic</h2>
+<section id="how-to-verify-whether-two-graphs-are-isomorphic" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> How to Verify Whether Two Graphs Are Isomorphic</h1>
 <p>Determining whether two graphs are isomorphic is one of the fundamental problems of graph theory.</p>
 <p>The trivial step is to compare the number of vertices and edges.</p>
-<section id="step-1.-compare-the-degree-sequences" class="level3" data-number="1.14.1">
-<h3 data-number="1.14.1" class="anchored" data-anchor-id="step-1.-compare-the-degree-sequences"><span class="header-section-number">1.14.1</span> Step 1. Compare the Degree Sequences</h3>
+<section id="step-1.-compare-the-degree-sequences" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="step-1.-compare-the-degree-sequences"><span class="header-section-number">5.1</span> Step 1. Compare the Degree Sequences</h2>
 <p>Compute the degrees of all vertices and sort them in non-increasing order.</p>
 <p>If the resulting sequences differ, the graphs are not isomorphic.</p>
 <hr>
 </section>
-<section id="step-4.-compare-local-structures" class="level3" data-number="1.14.2">
-<h3 data-number="1.14.2" class="anchored" data-anchor-id="step-4.-compare-local-structures"><span class="header-section-number">1.14.2</span> Step 4. Compare Local Structures</h3>
+<section id="step-4.-compare-local-structures" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="step-4.-compare-local-structures"><span class="header-section-number">5.2</span> Step 4. Compare Local Structures</h2>
 <p>Even if two graphs have the same degree sequence, they may still be non-isomorphic.</p>
 <p>Useful quantities include:</p>
 <ul>
@@ -457,16 +456,16 @@ G
 <p>If any of these quantities differ, the graphs are not isomorphic.</p>
 <hr>
 </section>
-<section id="step-5.-match-distinguished-vertices" class="level3" data-number="1.14.3">
-<h3 data-number="1.14.3" class="anchored" data-anchor-id="step-5.-match-distinguished-vertices"><span class="header-section-number">1.14.3</span> Step 5. Match Distinguished Vertices</h3>
+<section id="step-5.-match-distinguished-vertices" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="step-5.-match-distinguished-vertices"><span class="header-section-number">5.3</span> Step 5. Match Distinguished Vertices</h2>
 <p>Suppose the graphs have passed all previous tests.</p>
 <p>Vertices with unique properties must correspond to each other under any isomorphism.</p>
 <p>For example, if a graph contains exactly one vertex of degree <span class="math inline">\(4\)</span>, then this vertex must be mapped to the unique degree-<span class="math inline">\(4\)</span> vertex of the other graph.</p>
 <p>This often greatly reduces the number of possible bijections.</p>
 <hr>
 </section>
-<section id="step-6.-construct-an-explicit-bijection" class="level3" data-number="1.14.4">
-<h3 data-number="1.14.4" class="anchored" data-anchor-id="step-6.-construct-an-explicit-bijection"><span class="header-section-number">1.14.4</span> Step 6. Construct an Explicit Bijection</h3>
+<section id="step-6.-construct-an-explicit-bijection" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="step-6.-construct-an-explicit-bijection"><span class="header-section-number">5.4</span> Step 6. Construct an Explicit Bijection</h2>
 <p>After identifying corresponding vertices, attempt to define a bijection</p>
 <p><span class="math display">\[
 \varphi:V(G)\to V(H).
@@ -485,8 +484,8 @@ G\cong H.
 <hr>
 </section>
 </section>
-<section id="beyond-graph-invariants-the-graph-isomorphism-problem" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="beyond-graph-invariants-the-graph-isomorphism-problem"><span class="header-section-number">1.15</span> Beyond Graph Invariants: The Graph Isomorphism Problem</h2>
+<section id="beyond-graph-invariants-the-graph-isomorphism-problem" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Beyond Graph Invariants: The Graph Isomorphism Problem</h1>
 <p>The method based on graph invariants is extremely useful in practice. However, there exist many pairs of non-isomorphic graphs that share all common invariants such as:</p>
 <ul>
 <li>number of vertices;</li>
@@ -498,11 +497,10 @@ G\cong H.
 <p>Consequently, a more systematic approach is required.</p>
 <p>This leads to one of the most famous algorithmic problems in graph theory.</p>
 <hr>
-</section>
-<section id="the-graph-isomorphism-problem" class="level2" data-number="1.16">
-<h2 data-number="1.16" class="anchored" data-anchor-id="the-graph-isomorphism-problem"><span class="header-section-number">1.16</span> The Graph Isomorphism Problem</h2>
-<section id="input" class="level3" data-number="1.16.1">
-<h3 data-number="1.16.1" class="anchored" data-anchor-id="input"><span class="header-section-number">1.16.1</span> Input</h3>
+<section id="the-graph-isomorphism-problem" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-graph-isomorphism-problem"><span class="header-section-number">6.1</span> The Graph Isomorphism Problem</h2>
+<section id="input" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="input"><span class="header-section-number">6.1.1</span> Input</h3>
 <p>Two graphs</p>
 <p><span class="math display">\[
 G=(V,E),
@@ -514,8 +512,8 @@ H=(W,F)
 |V|=|W|=n.
 \]</span></p>
 </section>
-<section id="question" class="level3" data-number="1.16.2">
-<h3 data-number="1.16.2" class="anchored" data-anchor-id="question"><span class="header-section-number">1.16.2</span> Question</h3>
+<section id="question" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="question"><span class="header-section-number">6.1.2</span> Question</h3>
 <p>Does there exist a bijection <span class="math inline">\(\varphi:V\to W\)</span> such that</p>
 <p><span class="math display">\[
 uv\in E(G)
@@ -526,8 +524,8 @@ uv\in E(G)
 <hr>
 </section>
 </section>
-<section id="a-naive-algorithm" class="level2" data-number="1.17">
-<h2 data-number="1.17" class="anchored" data-anchor-id="a-naive-algorithm"><span class="header-section-number">1.17</span> A Naive Algorithm</h2>
+<section id="a-naive-algorithm" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="a-naive-algorithm"><span class="header-section-number">6.2</span> A Naive Algorithm</h2>
 <p>A brute-force approach consists of checking all possible bijections</p>
 <p><span class="math display">\[
 \varphi:V\to W.
@@ -541,8 +539,8 @@ n!
 \left(\frac{n}{e}\right)^n,
 \]</span></p>
 <p>which grows extremely rapidly.</p>
-<section id="how-long-would-brute-force-take" class="level3" data-number="1.17.1">
-<h3 data-number="1.17.1" class="anchored" data-anchor-id="how-long-would-brute-force-take"><span class="header-section-number">1.17.1</span> How Long Would Brute Force Take?</h3>
+<section id="how-long-would-brute-force-take" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="how-long-would-brute-force-take"><span class="header-section-number">6.2.1</span> How Long Would Brute Force Take?</h3>
 <p>Suppose, very optimistically, that a modern computer can check <span class="math inline">\(10^9\)</span> (one billion) bijections per second. Then the running time is approximately</p>
 <p><span class="math display">\[
 \frac{n!}{10^9}
@@ -605,8 +603,8 @@ n!
 <hr>
 </section>
 </section>
-<section id="complexity-theoretic-status" class="level2" data-number="1.18">
-<h2 data-number="1.18" class="anchored" data-anchor-id="complexity-theoretic-status"><span class="header-section-number">1.18</span> Complexity-Theoretic Status</h2>
+<section id="complexity-theoretic-status" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="complexity-theoretic-status"><span class="header-section-number">6.3</span> Complexity-Theoretic Status</h2>
 <p>The Graph Isomorphism problem occupies a unique position in complexity theory.</p>
 <p>It is known that</p>
 <p><span class="math display">\[
@@ -621,8 +619,8 @@ n!
 <p>Therefore Graph Isomorphism is one of the few classical problems whose precise complexity remains unknown.</p>
 <hr>
 </section>
-<section id="the-weisfeilerleman-method" class="level2" data-number="1.19">
-<h2 data-number="1.19" class="anchored" data-anchor-id="the-weisfeilerleman-method"><span class="header-section-number">1.19</span> The Weisfeiler–Leman Method</h2>
+<section id="the-weisfeilerleman-method" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="the-weisfeilerleman-method"><span class="header-section-number">6.4</span> The Weisfeiler–Leman Method</h2>
 <p>The most important practical idea is the <strong>Weisfeiler–Leman refinement algorithm</strong>.</p>
 <p>The basic version proceeds as follows.</p>
 <ol type="1">
@@ -635,8 +633,8 @@ n!
 <p>In practice, it distinguishes most graphs encountered in applications.</p>
 <hr>
 </section>
-<section id="babais-breakthrough-2015" class="level2" data-number="1.20">
-<h2 data-number="1.20" class="anchored" data-anchor-id="babais-breakthrough-2015"><span class="header-section-number">1.20</span> Babai’s Breakthrough (2015)</h2>
+<section id="babais-breakthrough-2015" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="babais-breakthrough-2015"><span class="header-section-number">6.5</span> Babai’s Breakthrough (2015)</h2>
 <p>Babai proved that Graph Isomorphism can be solved in</p>
 <p><span class="math display">\[
 2^{(\log n)^{O(1)}}
@@ -645,8 +643,8 @@ n!
 <p>Such running times are called <strong>quasi-polynomial</strong>.</p>
 <p>They are significantly smaller than exponential running times such as <span class="math inline">\(2^n\)</span> but still larger than every polynomial <span class="math inline">\(n^k\)</span>.</p>
 </section>
-<section id="special-classes-of-graphs" class="level2" data-number="1.21">
-<h2 data-number="1.21" class="anchored" data-anchor-id="special-classes-of-graphs"><span class="header-section-number">1.21</span> Special Classes of Graphs</h2>
+<section id="special-classes-of-graphs" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="special-classes-of-graphs"><span class="header-section-number">6.6</span> Special Classes of Graphs</h2>
 <p>Although the complexity of the Graph Isomorphism problem is unknown for arbitrary graphs, polynomial-time algorithms are known for many important graph families.</p>
 <p>Examples include:</p>
 <ul>
@@ -664,8 +662,8 @@ O(n)
 <p>Consequently, the difficulty of the Graph Isomorphism problem comes not from sparse or highly structured graphs, but rather from graphs possessing many symmetries.</p>
 <p>In practice, special graph classes arise frequently in computer science. Therefore, many real-world instances can be solved much faster than the worst-case theoretical bounds suggest.</p>
 </section>
-<section id="modern-algorithms" class="level2" data-number="1.22">
-<h2 data-number="1.22" class="anchored" data-anchor-id="modern-algorithms"><span class="header-section-number">1.22</span> Modern Algorithms</h2>
+<section id="modern-algorithms" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="modern-algorithms"><span class="header-section-number">6.7</span> Modern Algorithms</h2>
 <p>Modern graph isomorphism algorithms do not examine all possible vertex permutations.</p>
 <p>Instead, they combine several ideas:</p>
 <ol type="1">
@@ -678,8 +676,8 @@ O(n)
 <p>The most influential practical approach is the Weisfeiler–Leman refinement procedure, which repeatedly partitions vertices into classes according to their local neighborhoods.</p>
 <p>These methods eliminate the overwhelming majority of impossible vertex correspondences before any exhaustive search is attempted.</p>
 </section>
-<section id="state-of-the-art" class="level2" data-number="1.23">
-<h2 data-number="1.23" class="anchored" data-anchor-id="state-of-the-art"><span class="header-section-number">1.23</span> State of the Art</h2>
+<section id="state-of-the-art" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="state-of-the-art"><span class="header-section-number">6.8</span> State of the Art</h2>
 <p>The current understanding of the Graph Isomorphism problem may be summarized as follows.</p>
 <ol type="1">
 <li><p>Graph Isomorphism belongs to the complexity class</p>
@@ -693,6 +691,94 @@ O(n)
 <li><p>Practical software can routinely solve instances involving thousands or even millions of vertices.</p></li>
 </ol>
 <p>Consequently, Graph Isomorphism occupies a unique position among classical computational problems: it is neither known to be easy nor known to be hard.</p>
+<div id="ed6ad809" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>Are G and H isomorphic? True</code></pre>
+</div>
+</div>
+<div id="3c048061" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_1_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="e3901359" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>n = 10, n! = 3.629e+06, time = 1.151e-10 years
+n = 15, n! = 1.308e+12, time = 4.147e-05 years
+n = 20, n! = 2.433e+18, time = 7.715e+01 years
+n = 25, n! = 1.551e+25, time = 4.919e+08 years
+n = 30, n! = 2.653e+32, time = 8.411e+15 years</code></pre>
+</div>
+</div>
+<div id="28946d73" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_1_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="ff187109" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_1_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="e716ec3f" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>Are G and H isomorphic? True
+Time used: 0.003286 seconds</code></pre>
+</div>
+</div>
+<div id="4c43dfab" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_1_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="07016363" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-stdout">
+<pre><code>Degree sequence of G: [2, 2, 2, 2, 2, 2]
+Degree sequence of H: [2, 2, 2, 2, 2, 2]
+Is G connected? True
+Is H connected? False
+Are G and H isomorphic? False</code></pre>
+</div>
+</div>
+<div id="7106bcd6" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_1_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="3b76e770" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-stdout">
+<pre><code>Are the molecular graphs isomorphic? False</code></pre>
+</div>
+</div>
+<div id="e95a5abe" class="cell" data-execution_count="14">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seminar_1_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

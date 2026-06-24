@@ -2,184 +2,184 @@
   {
     "objectID": "seminars/seminar_1.html",
     "href": "seminars/seminar_1.html",
-    "title": "Seminar 1:",
+    "title": "Seminar 1: Graphs and Isomorphism",
     "section": "",
-    "text": "In this seminar we introduce the basic notions of graph theory required for studying graph isomorphism, connectedness, graph complements, and elementary Ramsey theory.\n\n\nA simple graph is a pair\n\\[\nG=(V,E),\n\\]\nwhere\n\n\\(V\\) is a finite set of vertices;\n\\(E\\subseteq \\binom{V}{2}\\) is a set of unordered pairs of distinct vertices called edges.\n\nThroughout the seminar we consider only finite simple graphs.\nIf \\(|V|=p\\), \\(|E|=q\\), then \\(G\\) is called a \\((p,q)\\)-graph.\nThe complete graph on \\(n\\) vertices is denoted by \\(K_n\\).\n\n\n\nThe degree of a vertex \\(v\\) is the number of edges incident with \\(v\\). It is denoted by \\(d(v)\\).\nThe list\n\\[\n(d(v_1),\\ldots,d(v_n))\n\\]\nis called the degree sequence of the graph.\nUsually the degree sequence is written in non-increasing order.\n\n\n\nOne of the most fundamental identities in graph theory is the following.\n\n\nFor every graph \\(G\\),\n\\[\n\\sum_{v\\in V(G)} d(v)=2|E(G)|.\n\\]\n\n\n\nEvery edge contributes exactly one to the degree of each of its endpoints. Hence every edge contributes two to the total sum of degrees. Therefore\n\\[\n\\sum_{v\\in V(G)} d(v)=2|E(G)|.\n\\qquad\\square\n\\]\n\n\n\nThe number of vertices of odd degree is even.\n\n\n\n\nA sequence\n\\[\n(d_1,\\ldots,d_n)\n\\]\nis called graphical if there exists a graph whose degree sequence is equal to this sequence.\nThe Handshake Lemma immediately implies a necessary condition:\n\\[\nd_1+\\cdots+d_n\n\\]\nmust be an even number. This condition is necessary but not sufficient. For example, \\((4,4,4,4,2)\\) is not graphical.\n\n\n\nTwo graphs may look different when drawn in the plane while representing exactly the same combinatorial structure.\n\n\nGraphs\n\\[\nG=(V,E),\n\\qquad\nH=(W,F)\n\\]\nare called isomorphic if there exists a bijection \\(\\varphi:V\\to W\\) such that\n\\[\nuv\\in E\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in F.\n\\]\nThe map \\(\\varphi\\) is called an isomorphism.\nWe write\n\\[\nG\\cong H.\n\\]\nIntuitively, two graphs are isomorphic if one can be obtained from the other merely by relabelling the vertices.\n\n\n\n\nA quantity that is preserved under isomorphism is called a graph invariant.\nIf\n\\[\nG\\cong H,\n\\]\nthen the following quantities coincide:\n\nnumber of vertices;\nnumber of edges;\ndegree sequence;\nnumber of connected components;\nnumber of cycles of each length.\n\nGraph invariants are useful for proving that two graphs are not isomorphic.\n\n\n\nA path in a graph is a sequence of vertices\n\\[\nv_0,v_1,\\ldots,v_k\n\\]\nsuch that every consecutive pair of vertices is connected by an edge.\n\n\nA graph is called connected if every pair of vertices can be joined by a path.\nA maximal connected subgraph is called a connected component.\nEvery graph can be uniquely decomposed into connected components.\n\n\n\n\nA graph is called a tree if it is connected and contains no cycles.\nTrees play a central role in graph theory.\n\n\n\nLet \\(G=(V,E)\\) be a graph. The complement of \\(G\\) is the graph \\(\\overline G=(V,\\overline E)\\), where\n\\[\nuv\\in\\overline E\n\\quad\\Longleftrightarrow\\quad\nuv\\notin E.\n\\]\nThus\n\\[\nE(\\overline G)\n=\nE(K_n)\\setminus E(G).\n\\]\n\n\n\nA graph is called self-complementary if\n\\[\nG\\cong \\overline G.\n\\]\n\n\nIf \\(G\\) is self-complementary and has \\(n\\) vertices, then\n\\[\n|E(G)|\n=\n\\frac12\\binom{n}{2}.\n\\]\n\n\n\n\n\n\nFor every graph \\(G\\), at least one of the graphs\n\\[\nG\n\\quad\\text{and}\\quad\n\\overline G\n\\]\nis connected.\n\n\n\nAssume that \\(G\\) is disconnected. Then its vertices can be partitioned into at least two connected components.\nVertices belonging to different components are not adjacent in \\(G\\), and therefore become adjacent in \\(\\overline G\\). Consequently every component of \\(G\\) is connected to every other component inside \\(\\overline G\\), implying that \\(\\overline G\\) is connected. \\(\\square\\)\n\n\n\nEvery self-complementary graph is connected.\n\n\n\n\nTwo graphs are called non-isomorphic if no isomorphism between them exists.\nWhen counting graphs up to isomorphism, graphs differing only by vertex labels are considered identical.\nThis leads to the notion of an unlabelled graph, which represents an entire isomorphism class of labelled graphs.\n\n\n\nRamsey theory studies the appearance of order in sufficiently large structures.\n\n\nThe Ramsey number \\(R(s,t)\\) is the smallest integer \\(n\\) such that every red-blue colouring of the edges of \\(K_n\\) contains either\n\na red copy of \\(K_s\\), or\na blue copy of \\(K_t\\).\n\n\n\n\n\nDetermining whether two graphs are isomorphic is one of the fundamental problems of graph theory.\nThe trivial step is to compare the number of vertices and edges.\n\n\nCompute the degrees of all vertices and sort them in non-increasing order.\nIf the resulting sequences differ, the graphs are not isomorphic.\n\n\n\n\nEven if two graphs have the same degree sequence, they may still be non-isomorphic.\nUseful quantities include:\n\nnumber of connected components;\nnumber of triangles;\nnumber of cycles of a given length;\nnumber of vertices of each degree;\nadjacency relations between high-degree vertices.\n\nIf any of these quantities differ, the graphs are not isomorphic.\n\n\n\n\nSuppose the graphs have passed all previous tests.\nVertices with unique properties must correspond to each other under any isomorphism.\nFor example, if a graph contains exactly one vertex of degree \\(4\\), then this vertex must be mapped to the unique degree-\\(4\\) vertex of the other graph.\nThis often greatly reduces the number of possible bijections.\n\n\n\n\nAfter identifying corresponding vertices, attempt to define a bijection\n\\[\n\\varphi:V(G)\\to V(H).\n\\]\nOne must verify that\n\\[\nuv\\in E(G)\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in E(H)\n\\]\nfor every pair of vertices.\nIf such a bijection exists, then\n\\[\nG\\cong H.\n\\]\n\n\n\n\n\nThe method based on graph invariants is extremely useful in practice. However, there exist many pairs of non-isomorphic graphs that share all common invariants such as:\n\nnumber of vertices;\nnumber of edges;\ndegree sequence;\nnumber of connected components;\nnumber of cycles of various lengths.\n\nConsequently, a more systematic approach is required.\nThis leads to one of the most famous algorithmic problems in graph theory.\n\n\n\n\n\n\nTwo graphs\n\\[\nG=(V,E),\n\\qquad\nH=(W,F)\n\\]\nwith\n\\[\n|V|=|W|=n.\n\\]\n\n\n\nDoes there exist a bijection \\(\\varphi:V\\to W\\) such that\n\\[\nuv\\in E(G)\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in E(H)?\n\\]\nIf such a bijection exists, the graphs are isomorphic.\n\n\n\n\n\nA brute-force approach consists of checking all possible bijections\n\\[\n\\varphi:V\\to W.\n\\]\nSince there are \\(n!\\) such bijections, the running time is approximately \\(O(n!)\\).\nUsing Stirling’s approximation,\n\\[\nn!\n\\approx\n\\sqrt{2\\pi n}\n\\left(\\frac{n}{e}\\right)^n,\n\\]\nwhich grows extremely rapidly.\n\n\nSuppose, very optimistically, that a modern computer can check \\(10^9\\) (one billion) bijections per second. Then the running time is approximately\n\\[\n\\frac{n!}{10^9}\n\\]\nseconds.\nFor example, \\(20! \\approx 2.4\\cdot 10^{18}\\).\nHence brute force would take approximately \\(\\frac{20!}{10^9} \\approx 2.4\\cdot 10^9\\) seconds.\nSince one year has about \\(3.15\\cdot 10^7\\) seconds, this is approximately\n\\[\n\\frac{2.4\\cdot 10^9}{3.15\\cdot 10^7}\n\\approx 77\n\\]\nyears.\nThus, even for graphs with only \\(20\\) vertices, the naive algorithm is already infeasible.\n\nThe situation becomes much worse as \\(n\\) grows.\n\n\n\n\n\n\n\n\nNumber of vertices \\(n\\)\nNumber of bijections \\(n!\\)\nTime at \\(10^9\\) checks/sec\n\n\n\n\n\\(10\\)\n\\(3.6\\cdot 10^6\\)\nless than \\(1\\) second\n\n\n\\(15\\)\n\\(1.3\\cdot 10^{12}\\)\nabout \\(22\\) minutes\n\n\n\\(20\\)\n\\(2.4\\cdot 10^{18}\\)\nabout \\(77\\) years\n\n\n\\(25\\)\n\\(1.6\\cdot 10^{25}\\)\nabout \\(5\\cdot 10^8\\) years\n\n\n\\(30\\)\n\\(2.7\\cdot 10^{32}\\)\nabout \\(8.4\\cdot 10^{15}\\) years\n\n\n\nTherefore, the brute-force method is not a serious algorithm for graph isomorphism, except for very small graphs.\nThis explains why more sophisticated methods are needed: instead of checking all possible vertex permutations, modern algorithms try to exploit graph structure, vertex refinement, symmetry, and group-theoretic ideas.\n\n\n\n\n\nThe Graph Isomorphism problem occupies a unique position in complexity theory.\nIt is known that\n\\[\n\\text{GI}\\in\\text{NP}.\n\\]\nIndeed, if an isomorphism exists, it can be verified in polynomial time.\nSurprisingly, despite decades of research:\n\nno polynomial-time algorithm is known for general graphs;\nno proof exists that the problem is NP-complete.\n\nTherefore Graph Isomorphism is one of the few classical problems whose precise complexity remains unknown.\n\n\n\n\nThe most important practical idea is the Weisfeiler–Leman refinement algorithm.\nThe basic version proceeds as follows.\n\nAssign every vertex the same color.\nRepeatedly recolor each vertex according to the multiset of colors of its neighbors.\nContinue until the coloring stabilizes.\n\nIf two graphs produce different color distributions, they cannot be isomorphic.\nThe algorithm runs in polynomial time.\nIn practice, it distinguishes most graphs encountered in applications.\n\n\n\n\nBabai proved that Graph Isomorphism can be solved in\n\\[\n2^{(\\log n)^{O(1)}}\n\\]\ntime.\nSuch running times are called quasi-polynomial.\nThey are significantly smaller than exponential running times such as \\(2^n\\) but still larger than every polynomial \\(n^k\\).\n\n\n\nAlthough the complexity of the Graph Isomorphism problem is unknown for arbitrary graphs, polynomial-time algorithms are known for many important graph families.\nExamples include:\n\ntrees;\nplanar graphs;\ninterval graphs;\nbounded-degree graphs;\ngraphs of bounded treewidth.\n\nFor trees, graph isomorphism can be solved in\n\\[\nO(n)\n\\]\ntime.\nConsequently, the difficulty of the Graph Isomorphism problem comes not from sparse or highly structured graphs, but rather from graphs possessing many symmetries.\nIn practice, special graph classes arise frequently in computer science. Therefore, many real-world instances can be solved much faster than the worst-case theoretical bounds suggest.\n\n\n\nModern graph isomorphism algorithms do not examine all possible vertex permutations.\nInstead, they combine several ideas:\n\nVertex refinement techniques.\nPartition refinement.\nCanonical labeling.\nBacktracking and pruning.\nGroup-theoretic methods.\n\nThe most influential practical approach is the Weisfeiler–Leman refinement procedure, which repeatedly partitions vertices into classes according to their local neighborhoods.\nThese methods eliminate the overwhelming majority of impossible vertex correspondences before any exhaustive search is attempted.\n\n\n\nThe current understanding of the Graph Isomorphism problem may be summarized as follows.\n\nGraph Isomorphism belongs to the complexity class\n\\[\n\\mathrm{NP}.\n\\]\nNo polynomial-time algorithm is known for arbitrary graphs.\nNo proof exists that Graph Isomorphism is NP-complete.\nBabai’s quasi-polynomial algorithm is the best known theoretical result for general graphs.\nPolynomial-time algorithms are known for many important graph classes.\nPractical software can routinely solve instances involving thousands or even millions of vertices.\n\nConsequently, Graph Isomorphism occupies a unique position among classical computational problems: it is neither known to be easy nor known to be hard."
-  },
-  {
-    "objectID": "seminars/seminar_1.html#graphs",
-    "href": "seminars/seminar_1.html#graphs",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "A simple graph is a pair\n\\[\nG=(V,E),\n\\]\nwhere\n\n\\(V\\) is a finite set of vertices;\n\\(E\\subseteq \\binom{V}{2}\\) is a set of unordered pairs of distinct vertices called edges.\n\nThroughout the seminar we consider only finite simple graphs.\nIf \\(|V|=p\\), \\(|E|=q\\), then \\(G\\) is called a \\((p,q)\\)-graph.\nThe complete graph on \\(n\\) vertices is denoted by \\(K_n\\)."
+    "text": "In this seminar we introduce the basic notions of graph theory required for studying graph isomorphism, connectedness, graph complements, and elementary Ramsey theory."
   },
   {
     "objectID": "seminars/seminar_1.html#degree-of-a-vertex",
     "href": "seminars/seminar_1.html#degree-of-a-vertex",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "The degree of a vertex \\(v\\) is the number of edges incident with \\(v\\). It is denoted by \\(d(v)\\).\nThe list\n\\[\n(d(v_1),\\ldots,d(v_n))\n\\]\nis called the degree sequence of the graph.\nUsually the degree sequence is written in non-increasing order."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "1.1 Degree of a Vertex",
+    "text": "1.1 Degree of a Vertex\nThe degree of a vertex \\(v\\) is the number of edges incident with \\(v\\). It is denoted by \\(d(v)\\).\nThe list\n\\[\n(d(v_1),\\ldots,d(v_n))\n\\]\nis called the degree sequence of the graph.\nUsually the degree sequence is written in non-increasing order."
   },
   {
     "objectID": "seminars/seminar_1.html#handshake-lemma",
     "href": "seminars/seminar_1.html#handshake-lemma",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "One of the most fundamental identities in graph theory is the following.\n\n\nFor every graph \\(G\\),\n\\[\n\\sum_{v\\in V(G)} d(v)=2|E(G)|.\n\\]\n\n\n\nEvery edge contributes exactly one to the degree of each of its endpoints. Hence every edge contributes two to the total sum of degrees. Therefore\n\\[\n\\sum_{v\\in V(G)} d(v)=2|E(G)|.\n\\qquad\\square\n\\]\n\n\n\nThe number of vertices of odd degree is even."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "1.2 Handshake Lemma",
+    "text": "1.2 Handshake Lemma\nOne of the most fundamental identities in graph theory is the following.\n\n1.2.1 Theorem (Handshake Lemma)\nFor every graph \\(G\\),\n\\[\n\\sum_{v\\in V(G)} d(v)=2|E(G)|.\n\\]\n\n\n1.2.2 Proof\nEvery edge contributes exactly one to the degree of each of its endpoints. Hence every edge contributes two to the total sum of degrees. Therefore\n\\[\n\\sum_{v\\in V(G)} d(v)=2|E(G)|.\n\\qquad\\square\n\\]\n\n\n1.2.3 Corollary\nThe number of vertices of odd degree is even."
   },
   {
     "objectID": "seminars/seminar_1.html#degree-sequences",
     "href": "seminars/seminar_1.html#degree-sequences",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "A sequence\n\\[\n(d_1,\\ldots,d_n)\n\\]\nis called graphical if there exists a graph whose degree sequence is equal to this sequence.\nThe Handshake Lemma immediately implies a necessary condition:\n\\[\nd_1+\\cdots+d_n\n\\]\nmust be an even number. This condition is necessary but not sufficient. For example, \\((4,4,4,4,2)\\) is not graphical."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "1.3 Degree Sequences",
+    "text": "1.3 Degree Sequences\nA sequence\n\\[\n(d_1,\\ldots,d_n)\n\\]\nis called graphical if there exists a graph whose degree sequence is equal to this sequence.\nThe Handshake Lemma immediately implies a necessary condition:\n\\[\nd_1+\\cdots+d_n\n\\]\nmust be an even number. This condition is necessary but not sufficient. For example, \\((4,4,4,4,2)\\) is not graphical."
   },
   {
-    "objectID": "seminars/seminar_1.html#graph-isomorphism",
-    "href": "seminars/seminar_1.html#graph-isomorphism",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Two graphs may look different when drawn in the plane while representing exactly the same combinatorial structure.\n\n\nGraphs\n\\[\nG=(V,E),\n\\qquad\nH=(W,F)\n\\]\nare called isomorphic if there exists a bijection \\(\\varphi:V\\to W\\) such that\n\\[\nuv\\in E\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in F.\n\\]\nThe map \\(\\varphi\\) is called an isomorphism.\nWe write\n\\[\nG\\cong H.\n\\]\nIntuitively, two graphs are isomorphic if one can be obtained from the other merely by relabelling the vertices."
+    "objectID": "seminars/seminar_1.html#definition",
+    "href": "seminars/seminar_1.html#definition",
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "2.1 Definition",
+    "text": "2.1 Definition\nGraphs\n\\[\nG=(V,E),\n\\qquad\nH=(W,F)\n\\]\nare called isomorphic if there exists a bijection \\(\\varphi:V\\to W\\) such that\n\\[\nuv\\in E\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in F.\n\\]\nThe map \\(\\varphi\\) is called an isomorphism.\nWe write\n\\[\nG\\cong H.\n\\]\nIntuitively, two graphs are isomorphic if one can be obtained from the other merely by relabelling the vertices."
   },
   {
     "objectID": "seminars/seminar_1.html#invariants-of-isomorphism",
     "href": "seminars/seminar_1.html#invariants-of-isomorphism",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "A quantity that is preserved under isomorphism is called a graph invariant.\nIf\n\\[\nG\\cong H,\n\\]\nthen the following quantities coincide:\n\nnumber of vertices;\nnumber of edges;\ndegree sequence;\nnumber of connected components;\nnumber of cycles of each length.\n\nGraph invariants are useful for proving that two graphs are not isomorphic."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "2.2 Invariants of Isomorphism",
+    "text": "2.2 Invariants of Isomorphism\nA quantity that is preserved under isomorphism is called a graph invariant.\nIf\n\\[\nG\\cong H,\n\\]\nthen the following quantities coincide:\n\nnumber of vertices;\nnumber of edges;\ndegree sequence;\nnumber of connected components;\nnumber of cycles of each length.\n\nGraph invariants are useful for proving that two graphs are not isomorphic."
   },
   {
-    "objectID": "seminars/seminar_1.html#connected-graphs",
-    "href": "seminars/seminar_1.html#connected-graphs",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "A path in a graph is a sequence of vertices\n\\[\nv_0,v_1,\\ldots,v_k\n\\]\nsuch that every consecutive pair of vertices is connected by an edge.\n\n\nA graph is called connected if every pair of vertices can be joined by a path.\nA maximal connected subgraph is called a connected component.\nEvery graph can be uniquely decomposed into connected components."
+    "objectID": "seminars/seminar_1.html#definition-1",
+    "href": "seminars/seminar_1.html#definition-1",
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "3.1 Definition",
+    "text": "3.1 Definition\nA graph is called connected if every pair of vertices can be joined by a path.\nA maximal connected subgraph is called a connected component.\nEvery graph can be uniquely decomposed into connected components."
   },
   {
     "objectID": "seminars/seminar_1.html#trees",
     "href": "seminars/seminar_1.html#trees",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "A graph is called a tree if it is connected and contains no cycles.\nTrees play a central role in graph theory."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "3.2 Trees",
+    "text": "3.2 Trees\nA graph is called a tree if it is connected and contains no cycles.\nTrees play a central role in graph theory."
   },
   {
     "objectID": "seminars/seminar_1.html#complement-of-a-graph",
     "href": "seminars/seminar_1.html#complement-of-a-graph",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Let \\(G=(V,E)\\) be a graph. The complement of \\(G\\) is the graph \\(\\overline G=(V,\\overline E)\\), where\n\\[\nuv\\in\\overline E\n\\quad\\Longleftrightarrow\\quad\nuv\\notin E.\n\\]\nThus\n\\[\nE(\\overline G)\n=\nE(K_n)\\setminus E(G).\n\\]"
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "3.3 Complement of a Graph",
+    "text": "3.3 Complement of a Graph\nLet \\(G=(V,E)\\) be a graph. The complement of \\(G\\) is the graph \\(\\overline G=(V,\\overline E)\\), where\n\\[\nuv\\in\\overline E\n\\quad\\Longleftrightarrow\\quad\nuv\\notin E.\n\\]\nThus\n\\[\nE(\\overline G)\n=\nE(K_n)\\setminus E(G).\n\\]"
   },
   {
     "objectID": "seminars/seminar_1.html#self-complementary-graphs",
     "href": "seminars/seminar_1.html#self-complementary-graphs",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "A graph is called self-complementary if\n\\[\nG\\cong \\overline G.\n\\]\n\n\nIf \\(G\\) is self-complementary and has \\(n\\) vertices, then\n\\[\n|E(G)|\n=\n\\frac12\\binom{n}{2}.\n\\]"
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "3.4 Self-Complementary Graphs",
+    "text": "3.4 Self-Complementary Graphs\nA graph is called self-complementary if\n\\[\nG\\cong \\overline G.\n\\]\n\n3.4.1 Proposition\nIf \\(G\\) is self-complementary and has \\(n\\) vertices, then\n\\[\n|E(G)|\n=\n\\frac12\\binom{n}{2}.\n\\]"
   },
   {
     "objectID": "seminars/seminar_1.html#connectivity-of-complements",
     "href": "seminars/seminar_1.html#connectivity-of-complements",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "For every graph \\(G\\), at least one of the graphs\n\\[\nG\n\\quad\\text{and}\\quad\n\\overline G\n\\]\nis connected.\n\n\n\nAssume that \\(G\\) is disconnected. Then its vertices can be partitioned into at least two connected components.\nVertices belonging to different components are not adjacent in \\(G\\), and therefore become adjacent in \\(\\overline G\\). Consequently every component of \\(G\\) is connected to every other component inside \\(\\overline G\\), implying that \\(\\overline G\\) is connected. \\(\\square\\)\n\n\n\nEvery self-complementary graph is connected."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "3.5 Connectivity of Complements",
+    "text": "3.5 Connectivity of Complements\n\n3.5.1 Theorem\nFor every graph \\(G\\), at least one of the graphs\n\\[\nG\n\\quad\\text{and}\\quad\n\\overline G\n\\]\nis connected.\n\n\n3.5.2 Proof\nAssume that \\(G\\) is disconnected. Then its vertices can be partitioned into at least two connected components.\nVertices belonging to different components are not adjacent in \\(G\\), and therefore become adjacent in \\(\\overline G\\). Consequently every component of \\(G\\) is connected to every other component inside \\(\\overline G\\), implying that \\(\\overline G\\) is connected. \\(\\square\\)\n\n\n3.5.3 Corollary\nEvery self-complementary graph is connected."
   },
   {
     "objectID": "seminars/seminar_1.html#non-isomorphic-graphs",
     "href": "seminars/seminar_1.html#non-isomorphic-graphs",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Two graphs are called non-isomorphic if no isomorphism between them exists.\nWhen counting graphs up to isomorphism, graphs differing only by vertex labels are considered identical.\nThis leads to the notion of an unlabelled graph, which represents an entire isomorphism class of labelled graphs."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "3.6 Non-Isomorphic Graphs",
+    "text": "3.6 Non-Isomorphic Graphs\nTwo graphs are called non-isomorphic if no isomorphism between them exists.\nWhen counting graphs up to isomorphism, graphs differing only by vertex labels are considered identical.\nThis leads to the notion of an unlabelled graph, which represents an entire isomorphism class of labelled graphs."
   },
   {
-    "objectID": "seminars/seminar_1.html#ramsey-theory",
-    "href": "seminars/seminar_1.html#ramsey-theory",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Ramsey theory studies the appearance of order in sufficiently large structures.\n\n\nThe Ramsey number \\(R(s,t)\\) is the smallest integer \\(n\\) such that every red-blue colouring of the edges of \\(K_n\\) contains either\n\na red copy of \\(K_s\\), or\na blue copy of \\(K_t\\)."
+    "objectID": "seminars/seminar_1.html#definition-2",
+    "href": "seminars/seminar_1.html#definition-2",
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "4.1 Definition",
+    "text": "4.1 Definition\nThe Ramsey number \\(R(s,t)\\) is the smallest integer \\(n\\) such that every red-blue colouring of the edges of \\(K_n\\) contains either\n\na red copy of \\(K_s\\), or\na blue copy of \\(K_t\\)."
   },
   {
-    "objectID": "seminars/seminar_1.html#how-to-verify-whether-two-graphs-are-isomorphic",
-    "href": "seminars/seminar_1.html#how-to-verify-whether-two-graphs-are-isomorphic",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Determining whether two graphs are isomorphic is one of the fundamental problems of graph theory.\nThe trivial step is to compare the number of vertices and edges.\n\n\nCompute the degrees of all vertices and sort them in non-increasing order.\nIf the resulting sequences differ, the graphs are not isomorphic.\n\n\n\n\nEven if two graphs have the same degree sequence, they may still be non-isomorphic.\nUseful quantities include:\n\nnumber of connected components;\nnumber of triangles;\nnumber of cycles of a given length;\nnumber of vertices of each degree;\nadjacency relations between high-degree vertices.\n\nIf any of these quantities differ, the graphs are not isomorphic.\n\n\n\n\nSuppose the graphs have passed all previous tests.\nVertices with unique properties must correspond to each other under any isomorphism.\nFor example, if a graph contains exactly one vertex of degree \\(4\\), then this vertex must be mapped to the unique degree-\\(4\\) vertex of the other graph.\nThis often greatly reduces the number of possible bijections.\n\n\n\n\nAfter identifying corresponding vertices, attempt to define a bijection\n\\[\n\\varphi:V(G)\\to V(H).\n\\]\nOne must verify that\n\\[\nuv\\in E(G)\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in E(H)\n\\]\nfor every pair of vertices.\nIf such a bijection exists, then\n\\[\nG\\cong H.\n\\]"
+    "objectID": "seminars/seminar_1.html#step-1.-compare-the-degree-sequences",
+    "href": "seminars/seminar_1.html#step-1.-compare-the-degree-sequences",
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "5.1 Step 1. Compare the Degree Sequences",
+    "text": "5.1 Step 1. Compare the Degree Sequences\nCompute the degrees of all vertices and sort them in non-increasing order.\nIf the resulting sequences differ, the graphs are not isomorphic."
   },
   {
-    "objectID": "seminars/seminar_1.html#beyond-graph-invariants-the-graph-isomorphism-problem",
-    "href": "seminars/seminar_1.html#beyond-graph-invariants-the-graph-isomorphism-problem",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "The method based on graph invariants is extremely useful in practice. However, there exist many pairs of non-isomorphic graphs that share all common invariants such as:\n\nnumber of vertices;\nnumber of edges;\ndegree sequence;\nnumber of connected components;\nnumber of cycles of various lengths.\n\nConsequently, a more systematic approach is required.\nThis leads to one of the most famous algorithmic problems in graph theory."
+    "objectID": "seminars/seminar_1.html#step-4.-compare-local-structures",
+    "href": "seminars/seminar_1.html#step-4.-compare-local-structures",
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "5.2 Step 4. Compare Local Structures",
+    "text": "5.2 Step 4. Compare Local Structures\nEven if two graphs have the same degree sequence, they may still be non-isomorphic.\nUseful quantities include:\n\nnumber of connected components;\nnumber of triangles;\nnumber of cycles of a given length;\nnumber of vertices of each degree;\nadjacency relations between high-degree vertices.\n\nIf any of these quantities differ, the graphs are not isomorphic."
+  },
+  {
+    "objectID": "seminars/seminar_1.html#step-5.-match-distinguished-vertices",
+    "href": "seminars/seminar_1.html#step-5.-match-distinguished-vertices",
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "5.3 Step 5. Match Distinguished Vertices",
+    "text": "5.3 Step 5. Match Distinguished Vertices\nSuppose the graphs have passed all previous tests.\nVertices with unique properties must correspond to each other under any isomorphism.\nFor example, if a graph contains exactly one vertex of degree \\(4\\), then this vertex must be mapped to the unique degree-\\(4\\) vertex of the other graph.\nThis often greatly reduces the number of possible bijections."
+  },
+  {
+    "objectID": "seminars/seminar_1.html#step-6.-construct-an-explicit-bijection",
+    "href": "seminars/seminar_1.html#step-6.-construct-an-explicit-bijection",
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "5.4 Step 6. Construct an Explicit Bijection",
+    "text": "5.4 Step 6. Construct an Explicit Bijection\nAfter identifying corresponding vertices, attempt to define a bijection\n\\[\n\\varphi:V(G)\\to V(H).\n\\]\nOne must verify that\n\\[\nuv\\in E(G)\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in E(H)\n\\]\nfor every pair of vertices.\nIf such a bijection exists, then\n\\[\nG\\cong H.\n\\]"
   },
   {
     "objectID": "seminars/seminar_1.html#the-graph-isomorphism-problem",
     "href": "seminars/seminar_1.html#the-graph-isomorphism-problem",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Two graphs\n\\[\nG=(V,E),\n\\qquad\nH=(W,F)\n\\]\nwith\n\\[\n|V|=|W|=n.\n\\]\n\n\n\nDoes there exist a bijection \\(\\varphi:V\\to W\\) such that\n\\[\nuv\\in E(G)\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in E(H)?\n\\]\nIf such a bijection exists, the graphs are isomorphic."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.1 The Graph Isomorphism Problem",
+    "text": "6.1 The Graph Isomorphism Problem\n\n6.1.1 Input\nTwo graphs\n\\[\nG=(V,E),\n\\qquad\nH=(W,F)\n\\]\nwith\n\\[\n|V|=|W|=n.\n\\]\n\n\n6.1.2 Question\nDoes there exist a bijection \\(\\varphi:V\\to W\\) such that\n\\[\nuv\\in E(G)\n\\quad\\Longleftrightarrow\\quad\n\\varphi(u)\\varphi(v)\\in E(H)?\n\\]\nIf such a bijection exists, the graphs are isomorphic."
   },
   {
     "objectID": "seminars/seminar_1.html#a-naive-algorithm",
     "href": "seminars/seminar_1.html#a-naive-algorithm",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "A brute-force approach consists of checking all possible bijections\n\\[\n\\varphi:V\\to W.\n\\]\nSince there are \\(n!\\) such bijections, the running time is approximately \\(O(n!)\\).\nUsing Stirling’s approximation,\n\\[\nn!\n\\approx\n\\sqrt{2\\pi n}\n\\left(\\frac{n}{e}\\right)^n,\n\\]\nwhich grows extremely rapidly.\n\n\nSuppose, very optimistically, that a modern computer can check \\(10^9\\) (one billion) bijections per second. Then the running time is approximately\n\\[\n\\frac{n!}{10^9}\n\\]\nseconds.\nFor example, \\(20! \\approx 2.4\\cdot 10^{18}\\).\nHence brute force would take approximately \\(\\frac{20!}{10^9} \\approx 2.4\\cdot 10^9\\) seconds.\nSince one year has about \\(3.15\\cdot 10^7\\) seconds, this is approximately\n\\[\n\\frac{2.4\\cdot 10^9}{3.15\\cdot 10^7}\n\\approx 77\n\\]\nyears.\nThus, even for graphs with only \\(20\\) vertices, the naive algorithm is already infeasible.\n\nThe situation becomes much worse as \\(n\\) grows.\n\n\n\n\n\n\n\n\nNumber of vertices \\(n\\)\nNumber of bijections \\(n!\\)\nTime at \\(10^9\\) checks/sec\n\n\n\n\n\\(10\\)\n\\(3.6\\cdot 10^6\\)\nless than \\(1\\) second\n\n\n\\(15\\)\n\\(1.3\\cdot 10^{12}\\)\nabout \\(22\\) minutes\n\n\n\\(20\\)\n\\(2.4\\cdot 10^{18}\\)\nabout \\(77\\) years\n\n\n\\(25\\)\n\\(1.6\\cdot 10^{25}\\)\nabout \\(5\\cdot 10^8\\) years\n\n\n\\(30\\)\n\\(2.7\\cdot 10^{32}\\)\nabout \\(8.4\\cdot 10^{15}\\) years\n\n\n\nTherefore, the brute-force method is not a serious algorithm for graph isomorphism, except for very small graphs.\nThis explains why more sophisticated methods are needed: instead of checking all possible vertex permutations, modern algorithms try to exploit graph structure, vertex refinement, symmetry, and group-theoretic ideas."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.2 A Naive Algorithm",
+    "text": "6.2 A Naive Algorithm\nA brute-force approach consists of checking all possible bijections\n\\[\n\\varphi:V\\to W.\n\\]\nSince there are \\(n!\\) such bijections, the running time is approximately \\(O(n!)\\).\nUsing Stirling’s approximation,\n\\[\nn!\n\\approx\n\\sqrt{2\\pi n}\n\\left(\\frac{n}{e}\\right)^n,\n\\]\nwhich grows extremely rapidly.\n\n6.2.1 How Long Would Brute Force Take?\nSuppose, very optimistically, that a modern computer can check \\(10^9\\) (one billion) bijections per second. Then the running time is approximately\n\\[\n\\frac{n!}{10^9}\n\\]\nseconds.\nFor example, \\(20! \\approx 2.4\\cdot 10^{18}\\).\nHence brute force would take approximately \\(\\frac{20!}{10^9} \\approx 2.4\\cdot 10^9\\) seconds.\nSince one year has about \\(3.15\\cdot 10^7\\) seconds, this is approximately\n\\[\n\\frac{2.4\\cdot 10^9}{3.15\\cdot 10^7}\n\\approx 77\n\\]\nyears.\nThus, even for graphs with only \\(20\\) vertices, the naive algorithm is already infeasible.\n\nThe situation becomes much worse as \\(n\\) grows.\n\n\n\n\n\n\n\n\nNumber of vertices \\(n\\)\nNumber of bijections \\(n!\\)\nTime at \\(10^9\\) checks/sec\n\n\n\n\n\\(10\\)\n\\(3.6\\cdot 10^6\\)\nless than \\(1\\) second\n\n\n\\(15\\)\n\\(1.3\\cdot 10^{12}\\)\nabout \\(22\\) minutes\n\n\n\\(20\\)\n\\(2.4\\cdot 10^{18}\\)\nabout \\(77\\) years\n\n\n\\(25\\)\n\\(1.6\\cdot 10^{25}\\)\nabout \\(5\\cdot 10^8\\) years\n\n\n\\(30\\)\n\\(2.7\\cdot 10^{32}\\)\nabout \\(8.4\\cdot 10^{15}\\) years\n\n\n\nTherefore, the brute-force method is not a serious algorithm for graph isomorphism, except for very small graphs.\nThis explains why more sophisticated methods are needed: instead of checking all possible vertex permutations, modern algorithms try to exploit graph structure, vertex refinement, symmetry, and group-theoretic ideas."
   },
   {
     "objectID": "seminars/seminar_1.html#complexity-theoretic-status",
     "href": "seminars/seminar_1.html#complexity-theoretic-status",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "The Graph Isomorphism problem occupies a unique position in complexity theory.\nIt is known that\n\\[\n\\text{GI}\\in\\text{NP}.\n\\]\nIndeed, if an isomorphism exists, it can be verified in polynomial time.\nSurprisingly, despite decades of research:\n\nno polynomial-time algorithm is known for general graphs;\nno proof exists that the problem is NP-complete.\n\nTherefore Graph Isomorphism is one of the few classical problems whose precise complexity remains unknown."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.3 Complexity-Theoretic Status",
+    "text": "6.3 Complexity-Theoretic Status\nThe Graph Isomorphism problem occupies a unique position in complexity theory.\nIt is known that\n\\[\n\\text{GI}\\in\\text{NP}.\n\\]\nIndeed, if an isomorphism exists, it can be verified in polynomial time.\nSurprisingly, despite decades of research:\n\nno polynomial-time algorithm is known for general graphs;\nno proof exists that the problem is NP-complete.\n\nTherefore Graph Isomorphism is one of the few classical problems whose precise complexity remains unknown."
   },
   {
     "objectID": "seminars/seminar_1.html#the-weisfeilerleman-method",
     "href": "seminars/seminar_1.html#the-weisfeilerleman-method",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "The most important practical idea is the Weisfeiler–Leman refinement algorithm.\nThe basic version proceeds as follows.\n\nAssign every vertex the same color.\nRepeatedly recolor each vertex according to the multiset of colors of its neighbors.\nContinue until the coloring stabilizes.\n\nIf two graphs produce different color distributions, they cannot be isomorphic.\nThe algorithm runs in polynomial time.\nIn practice, it distinguishes most graphs encountered in applications."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.4 The Weisfeiler–Leman Method",
+    "text": "6.4 The Weisfeiler–Leman Method\nThe most important practical idea is the Weisfeiler–Leman refinement algorithm.\nThe basic version proceeds as follows.\n\nAssign every vertex the same color.\nRepeatedly recolor each vertex according to the multiset of colors of its neighbors.\nContinue until the coloring stabilizes.\n\nIf two graphs produce different color distributions, they cannot be isomorphic.\nThe algorithm runs in polynomial time.\nIn practice, it distinguishes most graphs encountered in applications."
   },
   {
     "objectID": "seminars/seminar_1.html#babais-breakthrough-2015",
     "href": "seminars/seminar_1.html#babais-breakthrough-2015",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Babai proved that Graph Isomorphism can be solved in\n\\[\n2^{(\\log n)^{O(1)}}\n\\]\ntime.\nSuch running times are called quasi-polynomial.\nThey are significantly smaller than exponential running times such as \\(2^n\\) but still larger than every polynomial \\(n^k\\)."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.5 Babai’s Breakthrough (2015)",
+    "text": "6.5 Babai’s Breakthrough (2015)\nBabai proved that Graph Isomorphism can be solved in\n\\[\n2^{(\\log n)^{O(1)}}\n\\]\ntime.\nSuch running times are called quasi-polynomial.\nThey are significantly smaller than exponential running times such as \\(2^n\\) but still larger than every polynomial \\(n^k\\)."
   },
   {
     "objectID": "seminars/seminar_1.html#special-classes-of-graphs",
     "href": "seminars/seminar_1.html#special-classes-of-graphs",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Although the complexity of the Graph Isomorphism problem is unknown for arbitrary graphs, polynomial-time algorithms are known for many important graph families.\nExamples include:\n\ntrees;\nplanar graphs;\ninterval graphs;\nbounded-degree graphs;\ngraphs of bounded treewidth.\n\nFor trees, graph isomorphism can be solved in\n\\[\nO(n)\n\\]\ntime.\nConsequently, the difficulty of the Graph Isomorphism problem comes not from sparse or highly structured graphs, but rather from graphs possessing many symmetries.\nIn practice, special graph classes arise frequently in computer science. Therefore, many real-world instances can be solved much faster than the worst-case theoretical bounds suggest."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.6 Special Classes of Graphs",
+    "text": "6.6 Special Classes of Graphs\nAlthough the complexity of the Graph Isomorphism problem is unknown for arbitrary graphs, polynomial-time algorithms are known for many important graph families.\nExamples include:\n\ntrees;\nplanar graphs;\ninterval graphs;\nbounded-degree graphs;\ngraphs of bounded treewidth.\n\nFor trees, graph isomorphism can be solved in\n\\[\nO(n)\n\\]\ntime.\nConsequently, the difficulty of the Graph Isomorphism problem comes not from sparse or highly structured graphs, but rather from graphs possessing many symmetries.\nIn practice, special graph classes arise frequently in computer science. Therefore, many real-world instances can be solved much faster than the worst-case theoretical bounds suggest."
   },
   {
     "objectID": "seminars/seminar_1.html#modern-algorithms",
     "href": "seminars/seminar_1.html#modern-algorithms",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "Modern graph isomorphism algorithms do not examine all possible vertex permutations.\nInstead, they combine several ideas:\n\nVertex refinement techniques.\nPartition refinement.\nCanonical labeling.\nBacktracking and pruning.\nGroup-theoretic methods.\n\nThe most influential practical approach is the Weisfeiler–Leman refinement procedure, which repeatedly partitions vertices into classes according to their local neighborhoods.\nThese methods eliminate the overwhelming majority of impossible vertex correspondences before any exhaustive search is attempted."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.7 Modern Algorithms",
+    "text": "6.7 Modern Algorithms\nModern graph isomorphism algorithms do not examine all possible vertex permutations.\nInstead, they combine several ideas:\n\nVertex refinement techniques.\nPartition refinement.\nCanonical labeling.\nBacktracking and pruning.\nGroup-theoretic methods.\n\nThe most influential practical approach is the Weisfeiler–Leman refinement procedure, which repeatedly partitions vertices into classes according to their local neighborhoods.\nThese methods eliminate the overwhelming majority of impossible vertex correspondences before any exhaustive search is attempted."
   },
   {
     "objectID": "seminars/seminar_1.html#state-of-the-art",
     "href": "seminars/seminar_1.html#state-of-the-art",
-    "title": "Seminar 1:",
-    "section": "",
-    "text": "The current understanding of the Graph Isomorphism problem may be summarized as follows.\n\nGraph Isomorphism belongs to the complexity class\n\\[\n\\mathrm{NP}.\n\\]\nNo polynomial-time algorithm is known for arbitrary graphs.\nNo proof exists that Graph Isomorphism is NP-complete.\nBabai’s quasi-polynomial algorithm is the best known theoretical result for general graphs.\nPolynomial-time algorithms are known for many important graph classes.\nPractical software can routinely solve instances involving thousands or even millions of vertices.\n\nConsequently, Graph Isomorphism occupies a unique position among classical computational problems: it is neither known to be easy nor known to be hard."
+    "title": "Seminar 1: Graphs and Isomorphism",
+    "section": "6.8 State of the Art",
+    "text": "6.8 State of the Art\nThe current understanding of the Graph Isomorphism problem may be summarized as follows.\n\nGraph Isomorphism belongs to the complexity class\n\\[\n\\mathrm{NP}.\n\\]\nNo polynomial-time algorithm is known for arbitrary graphs.\nNo proof exists that Graph Isomorphism is NP-complete.\nBabai’s quasi-polynomial algorithm is the best known theoretical result for general graphs.\nPolynomial-time algorithms are known for many important graph classes.\nPractical software can routinely solve instances involving thousands or even millions of vertices.\n\nConsequently, Graph Isomorphism occupies a unique position among classical computational problems: it is neither known to be easy nor known to be hard.\n\n\nAre G and H isomorphic? True\n\n\n\n\n\n\n\n\n\n\n\n\n\nn = 10, n! = 3.629e+06, time = 1.151e-10 years\nn = 15, n! = 1.308e+12, time = 4.147e-05 years\nn = 20, n! = 2.433e+18, time = 7.715e+01 years\nn = 25, n! = 1.551e+25, time = 4.919e+08 years\nn = 30, n! = 2.653e+32, time = 8.411e+15 years\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre G and H isomorphic? True\nTime used: 0.003286 seconds\n\n\n\n\n\n\n\n\n\n\n\n\n\nDegree sequence of G: [2, 2, 2, 2, 2, 2]\nDegree sequence of H: [2, 2, 2, 2, 2, 2]\nIs G connected? True\nIs H connected? False\nAre G and H isomorphic? False\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre the molecular graphs isomorphic? False"
   },
   {
     "objectID": "seminars.html",
     "href": "seminars.html",
     "title": "1 Seminars",
     "section": "",
-    "text": "Seminar 1: Introduction to Graph Theory"
-  },
-  {
-    "objectID": "seminars.html#seminar-1",
-    "href": "seminars.html#seminar-1",
-    "title": "1 Seminars",
-    "section": "",
-    "text": "Seminar 1: Introduction to Graph Theory"
+    "text": "1 Seminars\n\nSeminar 1: Graphs and Isomorphism"
   },
   {
     "objectID": "index.html",
